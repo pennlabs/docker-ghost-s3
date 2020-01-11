@@ -6,7 +6,6 @@ workflows:
   build-and-publish:
     jobs:
       - docker/publish:
-          name: docker-publish
           cache_from: "pennlabs/ghost-s3:latest"
           image: pennlabs/ghost-s3
           tag: "${CIRCLE_SHA1},latest"
